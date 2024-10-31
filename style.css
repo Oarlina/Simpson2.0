@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    } /* permet de réinitialiser les marges et tailles des éléments à 0*/
+
+body{
+    background-color: rgb(241, 240, 127);
+    }
+#wrapper{
+    width:80%;
+    margin: auto;
+    } /* permet au header, main et aside d'etre centré et d'avoir des bords "vide" sur les côtés*/
+h1{
+    color:rgb(250, 192, 67);
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+    }
+h2{
+    padding: 0.2em;
+}
+h2,footer{
+    background-color: #4ab9fa;
+    text-align: center;
+}
+header>figure{
+    text-align: center;
+    }
+header>figure>img{
+    vertical-align: top; /*permet de coller l'image au texte suivant*/
+    width:100%;/* permet a l'image du header d'être aligné avec le reste du texte*/
+    }
+main{
+    background-color: white;
+    padding:0.5em;
+    }
+main>nav>a, aside, footer, h2{
+    color:white;
+    }
+main>article{
+    width:60%;
+    padding:0.5em;
+    }
+nav{
+    text-align: center;
+    height:20%; 
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0.2em;
+    border-bottom: white 1px dashed;
+    }
+nav, aside{
+    background-color: #4ab9fa;
+    padding: 1em;
+    width:20%;
+    }
+nav>a{
+    line-height: 25px; /* pour faire un epsace entre les lignes*/
+    width: 33%;
+    text-decoration: none; /* pour retirer le soulignement du lien*/
+}
+#mainparagraph{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    text-align: justify;/* permet au paragraphe d'être justifié*/
+}
+article{
+    height: 75%;
+}
+#mainparagraph{
+    width: 75%;
+    padding: 0.5em;
+}
+#mainparagraph>figure{
+    width: 100%;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+} /* permet que l'image puisse varié de taille selon la forme de la page*/
+figure>figcaption{
+    font-weight: bold ; 
+    text-align: center;
+    font-size: x-large;
+}/* pour que la légende soit en gras, centré et un peu plus grande que le texte*/
+figcaption>p{
+    font-style: normal;
+    font-size: medium;
+    text-align: center;
+    padding-bottom: 1em;
+}/* pour redonner une police normale et centré*/
+aside {
+    width: 25%;
+}
+aside >figure>img{
+    border: white 1px solid;
+}
+aside>img, #mainparagraph>figure>img{
+    text-align: center;
+}
+#maincontent{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 767px) { /* permet de faire une mise en pages pour les périphériques mobiles ou de petite taille*/
+    body {
+        display: flex;
+        font-size: large;
+        min-width: 100%;
+    } /* permet d'agrandir le texte*/
+    #wrapper, article, aside{
+        min-width: 100%;
+    }/* permet de retirer l'espace sur les côté que l'on retrouve sur l'ordinateur*/
+    main{
+        display: flex;
+        flex-direction: column;
+    }/* Pour que la mise en page soit en colonne*/
+    nav{
+        display:flex;
+        min-width: 100%;
+        flex-direction: column;
+    } /* permet de mettre les boutons en colonne*/
+    article, aside, nav{
+        text-align: center;
+    }
+    a{
+        min-width:100%;
+        padding:0.2em;
+    }
+    #maincontent, #mainparagraph{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    #wrapper {
+        min-height: 100%;
+        min-width: 100%;
+        }/* permet de retirer l'espace sur les côté que l'on retrouve sur l'ordinateur*/
+    main {
+        display: flex; 
+        flex-wrap: wrap;
+        font-size: large;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+        margin-bottom: 1em;
+    }
+    nav>a{
+        width: 30%;
+    }
+    aside{
+        text-align: center;
+    }
+}
