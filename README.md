@@ -1,6 +1,6 @@
 ### Exercice de Formation : Reproduction d'un Site Statique
 
-**Description du Projet**
+**Description du Projet**  
 Cet exercice a été réalisé dans le cadre d'une formation en développement web. L'objectif était de reproduire un site statique en respectant les bonnes pratiques et les normes du web.
 
 **Langages et Technologies Utilisés**
